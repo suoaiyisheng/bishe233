@@ -1,0 +1,190 @@
+<view class='wrapper'>
+    <view class='top'>
+        <view class="content">
+            <view class='avatar-wrapper'>
+                <image class='avatar' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+            </view>
+            <view class='info'>
+                <view>农夫山泉果园</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='mid'>
+        <van-tabs>
+            <van-tab title="商品">
+                <view class='commodity-wrapper'>
+                    <view class='commodity-nav'>
+                        <van-badge-group active="{{ active }}" bind:change="onChange">
+                            <van-badge wx:for="{{ goods }}" title="{{ item.index}}" data-index="{{ item.index }}" />
+                        </van-badge-group>
+                    </view>
+                    <view class='commodity'>
+                        <scroll-view scroll-y scroll-into-view="{{ toView }}" style="height:{{ scrollViewHeight }}px;" class='food-list' bindscroll="foodListScrolling">
+
+                            <view wx:for="{{ goods }}" wx:for-item="category" id="{{category.id }}">
+                                <view class='category-title'>{{ category.index }}</view>
+                                <van-card wx:for="{{ category.lists }}" num="{{ item.count}}" price="{{ item.price }}" desc="{{ item.desc }}" title="{{ item.name }}" thumb="{{ item.imgUrl }}" class="food">
+                                    <view slot="footer">
+                                        <van-button size="mini" round>-</van-button>
+                                        <text class='number'>{{ item.count }}</text>
+                                        <van-button size="mini" round>+</van-button>
+                                    </view>
+                                </van-card>
+                            </view>
+
+                        </scroll-view>
+                    </view>
+                </view>
+                <van-goods-action>
+                    <van-goods-action-icon icon="phone-o" text="联系卖家" />
+                    <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+                    <van-goods-action-button text="结算" />
+                </van-goods-action>
+            </van-tab>
+            <van-tab title="评价">
+                <scroll-view>
+                    <view>
+                        <view class='rate'>
+                            <view class='score'>4.8</view>
+                            <view>
+                                <view class='star-score-title'>商家评分</view>
+                                <view></view>
+                            </view>
+                            <view>
+                                <view class="rate-item-title">品质</view>
+                                <view class='rate-item-content'>4.8</view>
+                            </view>
+                            <view>
+                                <view class="rate-item-title">包装</view>
+                                <view class='rate-item-content'>4.9</view>
+                            </view>
+                            <view>
+                                <view class="rate-item-title">物流</view>
+                                <view class='rate-item-content'>4.9</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='line'></view>
+                    <view>
+                        <view class='comment-type'>
+                            <van-tag size="large" color='#F8C3CD'>全部</van-tag>
+                            <van-tag size="large" color='#F8C3CD'>最新</van-tag>
+                            <van-tag size="large" color='#F8C3CD'>好评</van-tag>
+                            <van-tag size="large" color='#696969'>差评</van-tag>
+                            <van-tag size="large" color='#F8C3CD'>有图</van-tag>
+                        </view>
+                    </view>
+                    <view class='comment'>
+                        <view class='comment-item'>
+                            <view>
+                                <image class='client-avatar' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                            </view>
+                            <view class='client-detail'>
+                                <view class='line-one'>
+                                    <text class='name'>王大壮</text>
+                                    <text class='time'>2019-02-20</text>
+                                </view>
+                                <view class='comment-detail'>
+                                    文字，是一个汉语词汇，拼音为wén zì，基本意思是记录思想、交流思想或承载语言的图像或符号。 该词出自《史记·秦始皇本纪》：“一法度衡石丈尺，车同轨，书同文字。”
+                                </view>
+                                <view class='image-wrapper'>
+                                    <image mode='aspectFill' class='comment-image' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                                </view>
+                                <view class='comment-commodity'>
+                                    <van-icon name='https://ojlty2hua.qnssl.com/image-1554536296464-54K56LWeICgxKS5wbmc=.png'></van-icon>
+                                    <van-tag color='#F8C3CD'>武鸣沃柑</van-tag>
+                                    <van-tag color='#F8C3CD'>香米</van-tag>
+                                </view>
+                            </view>
+                        </view>
+                        <view class='comment-item'>
+                            <view>
+                                <image class='client-avatar' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                            </view>
+                            <view class='client-detail'>
+                                <view class='line-one'>
+                                    <text class='name'>王大壮</text>
+                                    <text class='time'>2019-02-20</text>
+                                </view>
+                                <view class='comment-detail'>
+                                    文字，是一个汉语词汇，拼音为wén zì，基本意思是记录思想、交流思想或承载语言的图像或符号。 该词出自《史记·秦始皇本纪》：“一法度衡石丈尺，车同轨，书同文字。”
+                                </view>
+                                <view class='image-wrapper'>
+                                    <image mode='aspectFill' class='comment-image' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                                </view>
+                                <view class='comment-commodity'>
+                                    <van-icon name='https://ojlty2hua.qnssl.com/image-1554536296464-54K56LWeICgxKS5wbmc=.png'></van-icon>
+                                    <van-tag color='#F8C3CD'>武鸣沃柑</van-tag>
+                                    <van-tag color='#F8C3CD'>香米</van-tag>
+                                </view>
+                            </view>
+                        </view>
+                        <view class='comment-item'>
+                            <view>
+                                <image class='client-avatar' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                            </view>
+                            <view class='client-detail'>
+                                <view class='line-one'>
+                                    <text class='name'>王大壮</text>
+                                    <text class='time'>2019-02-20</text>
+                                </view>
+                                <view class='comment-detail'>
+                                    文字，是一个汉语词汇，拼音为wén zì，基本意思是记录思想、交流思想或承载语言的图像或符号。 该词出自《史记·秦始皇本纪》：“一法度衡石丈尺，车同轨，书同文字。”
+                                </view>
+                                <view class='image-wrapper'>
+                                    <image mode='aspectFill' class='comment-image' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                                </view>
+                                <view class='comment-commodity'>
+                                    <van-icon name='https://ojlty2hua.qnssl.com/image-1554536296464-54K56LWeICgxKS5wbmc=.png'></van-icon>
+                                    <van-tag color='#F8C3CD'>武鸣沃柑</van-tag>
+                                    <van-tag color='#F8C3CD'>香米</van-tag>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </van-tab>
+            <van-tab title="店家">
+                <view>
+                    <view class='store-panel'>
+                        <view class='store-panel-title'>配送信息</view>
+                        <view class='store-panel-content'>
+                            <view>商家合作快递/物流：圆通快递，距离您1km</view>
+                            <view>物流费用¥10</view>
+                        </view>
+                    </view>
+                    <view class='line'></view>
+                    <view class='store-panel'>
+                        <view class='store-panel-title'>商家服务</view>
+                        <view class='store-panel-content guarantee'>
+                            <van-icon name='https://ojlty2hua.qnssl.com/image-1554542292484-5L-dLnBuZw==.png?imageView2/0/q/75|imageslim' size="20px"></van-icon>
+                            <text>坏果赔偿</text>
+                        </view>
+                    </view>
+                    <view class='line'></view>
+                    <view class='store-panel'>
+                        <view class='store-panel-title'>商家实景</view>
+                        <view class='store-panel-content'>
+                            <image mode='aspectFill' class='comment-image' src="https://ojpbly1un.qnssl.com/gogopher.jpg"></image>
+                        </view>
+                    </view>
+                    <view class='line'></view>
+                    <view class='store-panel'>
+                        <view class='store-panel-title'>商家信息</view>
+                        <view class='store-panel-content'>
+                            <van-cell-group>
+                                <van-cell title="简介" value="内容" />
+                                <van-cell title="商家电话" value="内容" isLink/>
+                                <van-cell title="地址" value="内容" />
+                                <van-cell title="营业时间" value="内容" border="{{ false }}" />
+                            </van-cell-group>
+                        </view>
+                    </view>
+                    <view class='line'></view>
+                    <van-cell title="营业资质" isLink title-class="store-panel-title"></van-cell>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

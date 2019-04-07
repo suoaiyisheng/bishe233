@@ -1,0 +1,208 @@
+page,.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-wrapper{
+    height: calc(100% - 150px);
+}
+
+.top{
+    height: 300rpx;
+    position: relative;
+}
+
+.mid{
+    flex: 1;
+}
+
+.bottom{
+    height: 100rpx;
+}
+
+
+.content:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url('https://ojpbly1un.qnssl.com/gogopher.jpg');
+  background-size:cover;
+  width: 100%;
+  height: 300rpx;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.avatar-wrapper{
+    width: 200rpx;
+    margin: 10rpx auto;
+}
+
+.avatar{
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 50%;
+    border: 1px solid #f8f8f8;
+    text-align: center;
+}
+
+.info{
+    width: 60%;
+    margin: 10rpx auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.commodity-wrapper{
+    display: flex;
+}
+
+.commodity{
+    flex: 1;
+}
+
+.commodity-nav{
+    background-color: #f8f8f8;
+}
+
+.category-title{
+    font-size: 30rpx;
+    background-color: #fafafa;
+    padding:  10rpx 0 10rpx 15px;
+}
+
+.food-list{
+    height: 200px;
+}
+
+/* 评价页的css */
+.line{
+    height: 12rpx;
+    background-color: #f8f8f8; 
+}
+
+.rate{
+    padding: 30rpx 20rpx; 
+    display: flex;
+}
+
+.rate view{
+    flex: 1;
+}
+
+.score{
+    font-size: 64rpx;
+    font-weight: bold;
+    color: #f44
+}
+
+.star-score-title{
+    font-size: 24rpx;
+    color:#808080;
+}
+
+.rate-item-title{
+    font-size: 24rpx;
+    color: #696969;
+    text-align: center;
+}
+
+.rate-item-content{
+    text-align: center;
+    font-weight: bold;
+}
+
+.comment-type{
+    padding: 30rpx 20rpx;
+    text-align: center;
+}
+
+.comment-type .van-tag{
+    margin-right: 10rpx;
+}
+
+.comment-item{
+    padding: 30rpx 20rpx;
+    display: flex;
+}
+
+.client-avatar{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.client-detail{
+    flex: 1;
+    padding-left: 20rpx;
+}
+
+.line-one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    font-size: 32rpx;
+}
+
+.time{
+    font-size: 24rpx;
+    color: #696969;
+}
+
+.comment-detail{
+    font-size: 24rpx;
+}
+
+.comment-image{
+    width: 160rpx;
+    height: 200rpx;
+}
+
+.comment-commodity .van-tag{
+    margin: 0 10rpx;
+}
+
+.store-panel{
+    padding: 30rpx 0 30rpx 15px;
+}
+
+.store-panel-title{
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+
+.store-panel-content{
+    font-size: 24rpx;
+    color: #696969;
+}
+
+.guarantee{
+   display: flex;
+   align-items:center;
+}
+
+.store-panel-content .van-cell{
+    padding-left: 0px;
+}
+
+.number{
+    margin: 0 20rpx;
+}
+
